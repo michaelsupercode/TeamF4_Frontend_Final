@@ -1,0 +1,35 @@
+.menu {
+  z-index: 1;
+  min-height: 100%;
+  min-width: 100%;
+  position: fixed;
+  top: 0;
+  visibility: hidden;
+  opacity: 0;
+  text-align: center;
+  transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+
+  .menu-button {
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 3rem;
+    margin: 10px 0;
+  }
+
+  .add-drink-link {
+    background: #fff;
+    color: #000;
+  }
+}
+
+.menu.overlay {
+  visibility: visible;
+  opacity: 1;
+  background: rgba(0, 0, 0, 0.7);
+}
+
+.menu li a {
+  display: block;
+  padding: 45px 0;
+}

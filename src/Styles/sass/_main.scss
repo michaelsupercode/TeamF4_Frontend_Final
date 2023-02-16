@@ -1,0 +1,195 @@
+.Collapsible__trigger {
+  display: flex;
+  justify-content: center;
+  margin: 70px 0;
+}
+
+.category {
+  height: 320px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  h2,
+  p {
+    padding: 0 48px;
+  }
+
+  h2 {
+    font-size: 50px;
+  }
+
+  img {
+    width: 100%;
+  }
+}
+
+.cocktail-container {
+  &:nth-of-type(6n + 1) {
+    background: #6FC3DF;
+  }
+
+  &:nth-of-type(6n + 2) {
+    background: #8D82C4;
+  }
+
+  &:nth-of-type(6n + 3) {
+    background: #EC8D81;
+  }
+
+  &:nth-of-type(6n + 4) {
+    background: #E7B788;
+  }
+
+  &:nth-of-type(6n + 5) {
+    background: #8EA9E8;
+  }
+
+  &:nth-of-type(6n + 6) {
+    background: #87C5A4;
+  } 
+
+  .drink-list {
+    padding: 0 48px;
+    height: 320px;
+    display: flex;
+    align-items: center;
+  }
+
+  img {
+    width: 60%;
+  }
+
+  .title-wrapper {
+    width: 40%;
+    height: 80%;
+    transform: scaleX(-1);
+    display: flex;
+
+    h3 {
+      font-family: 'Montserrat';
+      font-weight: 700;
+      font-size: 28px;
+      text-align: center;
+      writing-mode: vertical-rl;
+      text-orientation: mixed;
+      transform: scaleY(-1);
+    }
+  }
+
+  &:nth-of-type(odd) {
+    img {
+      order: 1;
+    }
+  
+    .title-wrapper {
+      order: 2;
+
+      h3 {
+        margin-right: auto;
+      }
+    }
+  }
+
+  &:nth-of-type(even) {
+    img {
+      order: 2;
+    }
+
+    .title-wrapper {
+      order: 1;
+
+      h3 {
+        margin-left: auto;
+      }
+    }
+  }
+}
+
+.gin {
+  background: #6FC3DF;
+}
+
+.vodka {
+  background: #8D82C4;
+}
+
+.rum {
+  background: #EC8D81;
+}
+
+.scotch{
+  background: #E7B788;
+}
+
+.alkoholfrei{
+  background: #8EA9E8;
+}
+
+.zufall{
+  background: #87C5A4;
+}
+
+.map-container {
+  position: relative;
+}
+
+.drink-details {
+  background: #262B46;
+  z-index: 1;
+  min-height: 100%;
+  min-width: 100%;
+  text-align: center;
+  padding: 0 48px;
+  position: fixed;
+  top: 0;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+
+  .vector {
+    width: 24px;
+    height: 24px;
+    margin: 0;
+    position: absolute;
+    right: 20px;
+    top: 10px;
+  }
+
+  h3 {
+    font-size: 28px;
+    margin-top: 30px;
+  }
+
+  img {
+    width: 319px;
+    height: 319px;
+    margin: 20px 0 55px 0;
+  }
+
+  .detail-container {
+    display: block;
+    padding: 0 48px;
+    height: fit-content;
+    text-align: start;
+
+    ul {
+      margin: 30px 0;
+    }
+
+    p {
+      width: 100%;
+      margin: 0;
+    }
+  }
+}
+
+.visible {
+  visibility: visible;
+  opacity: 1;
+}
+
+.arrows {
+  width: 18px;
+  height: 29px;
+}

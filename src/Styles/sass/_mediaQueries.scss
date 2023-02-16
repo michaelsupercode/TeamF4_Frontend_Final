@@ -1,0 +1,61 @@
+@media (min-width: 481px) {
+  .add-drink-section {
+    display: flex;
+
+    figure {
+      position: static;
+    }
+
+    figure img:nth-of-type(1) {
+      width: 287px;
+      height: 209px;
+      top: 590px;
+      left: 379px;
+    }
+
+    figure img:nth-of-type(2) {
+      width: 272px;
+      height: 408px;
+      top: 524px;
+      right: 0;
+    }
+
+    figure img:nth-of-type(3) {
+      width: 246px;
+      height: 227px;
+      top: 817px;
+      left: 420px;
+    }
+  }
+
+  .category-container,
+  .cocktail-list-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .big-wrapper {
+    position: relative;
+
+    .detail-image-wrapper{
+
+      h3{
+        position: absolute;
+        left: 432px;
+        top: 5px;
+      }
+
+      img:nth-of-type(2){
+        position: absolute;
+        top: 61px;
+        left: 0;
+      }
+    }
+
+    .detail-container{
+      position: absolute;
+      left: 386px;
+      top: 105px;
+    }
+  }
+}

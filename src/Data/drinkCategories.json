@@ -1,0 +1,44 @@
+[
+  {
+    "id": "1",
+    "title": "Gin",
+    "description": "IPSUM DOLOR SIT AMET",
+    "class" : "gin",
+    "api": "filter.php%3Fi=Gin"
+  },
+  {
+    "id": "2",
+    "title": "Vodka",
+    "description": "FEUGIAT AMET TEMPUS",
+    "class" : "vodka",
+    "api": "filter.php%3Fi=Vodka"
+  },
+  {
+    "id": "3",
+    "title": "Rum",
+    "description": "LOREM ETIAM NULLAM",
+    "class" : "rum",
+    "api": "filter.php%3Fi=Rum"
+  },
+  {
+    "id": "4",
+    "title": "Scotch",
+    "description": "NISL SED ALIQUAM",
+    "class" : "scotch",
+    "api": "filter.php%3Fi=Scotch"
+  },
+  {
+    "id": "5",
+    "title": "Alkoholfrei",
+    "description": "IPSUM DOLOR SIT AMET",
+    "class" : "alkoholfrei",
+    "api": "filter.php%3Fa=Non_Alcoholic"
+  },
+  {
+    "id": "6",
+    "title": "Zufall",
+    "description": "FEUGIAT AMET TEMPUS",
+    "class" : "zufall",
+    "api": "random.php"
+  }
+]

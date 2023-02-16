@@ -1,0 +1,474 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Playfair+Display:wght@400;700&display=swap");
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.landingpage {
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #262B46;
+}
+
+h2,
+h3 {
+    font-family: "Playfair Display";
+    font-weight: 700;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+img {
+    width: 240px;
+    height: 240px;
+}
+
+body {
+    background: #262B46;
+    color: #fff;
+    font-family: "Montserrat";
+}
+
+header {
+    height: 352px;
+}
+
+header .navbar ul {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 24px;
+    margin: 15px 0;
+}
+
+header .navbar ul li {
+    font-size: 13px;
+}
+
+header .navbar ul li:first-of-type {
+    font-family: "Playfair Display";
+    font-weight: 700;
+    letter-spacing: 4px;
+}
+
+header .title-section {
+    padding: 0 48px;
+}
+
+header .title-section h1 {
+    font-family: "Playfair Display";
+    font-weight: 400;
+    font-size: 3.25rem;
+    margin-top: 68px;
+}
+
+header .title-section p {
+    font-size: 13px;
+    line-height: 1.3rem;
+    margin: 2% 0 10% 0;
+}
+
+.search-field {
+    padding: 0 48px;
+}
+
+.search-field input[type=text] {
+    width: 128px;
+    height: 32px;
+    outline: none;
+    border: none;
+    border-radius: 6px;
+    padding-left: 10px;
+    margin-right: 10px;
+}
+
+.search-field input[type=button] {
+    width: 78px;
+    height: 32px;
+    background: #6FC3DF;
+    border: none;
+    border-radius: 6px;
+}
+
+.search-field input[type=button]:hover {
+    cursor: pointer;
+}
+
+.search-field input[type=button]:active {
+    background: #43b1d6;
+}
+
+.menu {
+    z-index: 1;
+    min-height: 100%;
+    min-width: 100%;
+    position: fixed;
+    top: 0;
+    visibility: hidden;
+    opacity: 0;
+    text-align: center;
+    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+}
+
+.menu .menu-button {
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 3rem;
+    margin: 10px 0;
+}
+
+.menu .add-drink-link {
+    background: #fff;
+    color: #000;
+}
+
+.menu.overlay {
+    visibility: visible;
+    opacity: 1;
+    background: rgba(0, 0, 0, 0.7);
+}
+
+.menu li a {
+    display: block;
+    padding: 45px 0;
+}
+
+.Collapsible__trigger {
+    display: flex;
+    justify-content: center;
+    margin: 70px 0;
+}
+
+.category {
+    height: 320px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.category h2,
+.category p {
+    padding: 0 48px;
+}
+
+.category h2 {
+    font-size: 50px;
+}
+
+.category img {
+    width: 100%;
+}
+
+.cocktail-container:nth-of-type(6n+1) {
+    background: #6FC3DF;
+}
+
+.cocktail-container:nth-of-type(6n+2) {
+    background: #8D82C4;
+}
+
+.cocktail-container:nth-of-type(6n+3) {
+    background: #EC8D81;
+}
+
+.cocktail-container:nth-of-type(6n+4) {
+    background: #E7B788;
+}
+
+.cocktail-container:nth-of-type(6n+5) {
+    background: #8EA9E8;
+}
+
+.cocktail-container:nth-of-type(6n+6) {
+    background: #87C5A4;
+}
+
+.cocktail-container .drink-list {
+    padding: 0 48px;
+    height: 320px;
+    display: flex;
+    align-items: center;
+}
+
+.cocktail-container img {
+    width: 60%;
+}
+
+.cocktail-container .title-wrapper {
+    width: 40%;
+    height: 80%;
+    transform: scaleX(-1);
+    display: flex;
+}
+
+.cocktail-container .title-wrapper h3 {
+    font-family: "Montserrat";
+    font-weight: 700;
+    font-size: 28px;
+    text-align: center;
+    -ms-writing-mode: tb-rl;
+    writing-mode: vertical-rl;
+    -webkit-text-orientation: mixed;
+    text-orientation: mixed;
+    transform: scaleY(-1);
+}
+
+.cocktail-container:nth-of-type(odd) img {
+    order: 1;
+}
+
+.cocktail-container:nth-of-type(odd) .title-wrapper {
+    order: 2;
+}
+
+.cocktail-container:nth-of-type(odd) .title-wrapper h3 {
+    margin-right: auto;
+}
+
+.cocktail-container:nth-of-type(even) img {
+    order: 2;
+}
+
+.cocktail-container:nth-of-type(even) .title-wrapper {
+    order: 1;
+}
+
+.cocktail-container:nth-of-type(even) .title-wrapper h3 {
+    margin-left: auto;
+}
+
+.gin {
+    background: #6FC3DF;
+}
+
+.vodka {
+    background: #8D82C4;
+}
+
+.rum {
+    background: #EC8D81;
+}
+
+.scotch {
+    background: #E7B788;
+}
+
+.alkoholfrei {
+    background: #8EA9E8;
+}
+
+.zufall {
+    background: #87C5A4;
+}
+
+.map-container {
+    position: relative;
+}
+
+.drink-details {
+    background: #262B46;
+    z-index: 1;
+    min-height: 100%;
+    min-width: 100%;
+    text-align: center;
+    padding: 0 48px;
+    position: fixed;
+    top: 0;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+}
+
+.drink-details .vector {
+    width: 24px;
+    height: 24px;
+    margin: 0;
+    position: absolute;
+    right: 20px;
+    top: 10px;
+}
+
+.drink-details h3 {
+    font-size: 28px;
+    margin-top: 30px;
+}
+
+.drink-details img {
+    width: 319px;
+    height: 319px;
+    margin: 20px 0 55px 0;
+}
+
+.drink-details .detail-container {
+    display: block;
+    padding: 0 48px;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    text-align: start;
+}
+
+.drink-details .detail-container ul {
+    margin: 30px 0;
+}
+
+.drink-details .detail-container p {
+    width: 100%;
+    margin: 0;
+}
+
+.visible {
+    visibility: visible;
+    opacity: 1;
+}
+
+.arrows {
+    width: 18px;
+    height: 29px;
+}
+
+h2 {
+    padding: 0 48px;
+    margin: 72px 0 46px 0;
+}
+
+.add-drink-section {
+    padding: 0 48px;
+}
+
+.add-drink-section form input {
+    display: block;
+    width: 293px;
+    height: 30px;
+    border: none;
+    outline: none;
+    padding-left: 13px;
+    margin-bottom: 14px;
+}
+
+.add-drink-section form input[type=submit] {
+    height: initial;
+    background: #6FC3DF;
+    color: #fff;
+    border-radius: 6px;
+    padding: 16px 0;
+    margin-top: 29px;
+}
+
+.add-drink-section form input[type=submit]:hover {
+    cursor: pointer;
+}
+
+.add-drink-section form input[type=submit]:active {
+    background: #43b1d6;
+}
+
+.add-drink-section form textarea {
+    width: 293px;
+    height: 112px;
+    padding: 5px 0 0 13px;
+    margin-bottom: 14px;
+}
+
+.add-drink-section figure {
+    width: 100%;
+    height: 350px;
+    position: relative;
+}
+
+.add-drink-section figure img {
+    width: 50%;
+    position: absolute;
+}
+
+.add-drink-section figure img:nth-of-type(1) {
+    top: 100px;
+}
+
+.add-drink-section figure img:nth-of-type(2) {
+    top: 50px;
+    right: -10px;
+}
+
+.add-drink-section figure img:nth-of-type(3) {
+    width: 40%;
+    top: 250px;
+    left: 40px;
+}
+
+footer {
+    padding: 0 48px;
+}
+
+footer h3 {
+    font-size: 28px;
+    margin-top: 100px;
+}
+
+footer p {
+    line-height: 1.5rem;
+    margin: 45px 0 110px 0;
+}
+
+@media (min-width: 481px) {
+    .add-drink-section {
+        display: flex;
+    }
+    .add-drink-section figure {
+        position: static;
+    }
+    .add-drink-section figure img:nth-of-type(1) {
+        width: 287px;
+        height: 209px;
+        top: 590px;
+        left: 379px;
+    }
+    .add-drink-section figure img:nth-of-type(2) {
+        width: 272px;
+        height: 408px;
+        top: 524px;
+        right: 0;
+    }
+    .add-drink-section figure img:nth-of-type(3) {
+        width: 246px;
+        height: 227px;
+        top: 817px;
+        left: 420px;
+    }
+    .category-container,
+    .cocktail-list-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    .big-wrapper {
+        position: relative;
+    }
+    .big-wrapper .detail-image-wrapper h3 {
+        position: absolute;
+        left: 432px;
+        top: 5px;
+    }
+    .big-wrapper .detail-image-wrapper img:nth-of-type(2) {
+        position: absolute;
+        top: 61px;
+        left: 0;
+    }
+    .big-wrapper .detail-container {
+        position: absolute;
+        left: 386px;
+        top: 105px;
+    }
+}
+
+
+/*# sourceMappingURL=App.css.map */
