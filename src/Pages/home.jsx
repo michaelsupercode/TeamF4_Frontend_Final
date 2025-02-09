@@ -44,7 +44,7 @@ const Home = () => {
             key = {item.id}
             title = {item.title}
             description = {item.description}
-            class = {item.class}
+            className = {item.class}
             api = {item.api}
           />)}
         </div>
