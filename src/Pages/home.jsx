@@ -12,6 +12,7 @@ import ReactPlayer from "react-player";
 
 const Home = () => {
     const [intro, setIntro] = useState(false);
+  const vodkaApi = drinkCategories.find((item) => item.title === 'Vodka')?.api;
 
     // window.setTimeout(function() {
     //     setIntro(false);
@@ -38,7 +39,7 @@ const Home = () => {
        <div className="App">
       <Header />
       <SearchField />
-      <Collapsible trigger={<ArrowsImg />}>
+      <Collapsible trigger={<ArrowsImg to={vodkaApi ? `/cocktailList/${vodkaApi}` : undefined} />}>
         <div className='category-container'>
           {drinkCategories.map((item) => <SingleDrink
             key = {item.id}
