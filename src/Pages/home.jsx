@@ -11,11 +11,11 @@ import introM from "../video/intro.mp4";
 import ReactPlayer from "react-player";
 
 const Home = () => {
-    const [intro, setIntro] = useState(true);
+    const [intro, setIntro] = useState(false);
 
-    window.setTimeout(function() {
-        setIntro(false);
-    }, 25700);
+    // window.setTimeout(function() {
+    //     setIntro(false);
+    // }, 25700);
 
  
 
