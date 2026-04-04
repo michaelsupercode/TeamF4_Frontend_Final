@@ -1,8 +1,5 @@
 import Header from '../Components/header';
-import Collapsible from 'react-collapsible';
 import ArrowsImg from '../Components/arrows';
-import drinkCategories from '../Data/drinkCategories.json';
-import SingleDrink from '../Components/singleDrink';
 import Footer from '../Components/footer';
 import SearchField from '../Components/searchField';
 
@@ -37,17 +34,9 @@ const Home = () => {
        <div className="App">
       <Header />
       <SearchField />
-      <Collapsible trigger={<ArrowsImg to="/cocktailList/" />}>
-        <div className='category-container'>
-          {drinkCategories.map((item) => <SingleDrink
-            key = {item.id}
-            title = {item.title}
-            description = {item.description}
-            className = {item.class}
-            api = {item.api}
-          />)}
-        </div>
-      </Collapsible>
+      <div className='Collapsible__trigger'>
+        <ArrowsImg to="/cocktailList/" />
+      </div>
       <Footer />
     </div>
 	)}	

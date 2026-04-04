@@ -332,6 +332,28 @@ header .title-section p {
     opacity: 1;
 }
 
+.categories-button {
+    border: none;
+    border-radius: 999px;
+    background: #6FC3DF;
+    color: #1E243D;
+    font-family: "Montserrat";
+    font-weight: 700;
+    font-size: 14px;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    padding: 12px 22px;
+    cursor: pointer;
+}
+
+.categories-button:hover {
+    background: #5ab5d2;
+}
+
+.categories-button:active {
+    transform: translateY(1px);
+}
+
 .arrows {
     width: 18px;
     height: 29px;

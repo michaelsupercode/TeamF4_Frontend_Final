@@ -1,15 +1,21 @@
-import Arrows from '../Images/Arrows.png';
-import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 const ArrowsImg = ({ to }) => {
-  if (!to) {
-    return <img className='arrows' src={Arrows} alt="arrows" />;
-  }
+  const navigate = useNavigate();
+
+  const handleClick = (event) => {
+    if (!to) {
+      return;
+    }
+
+    event.stopPropagation();
+    navigate(to);
+  };
 
   return (
-    <Link to={to} onClick={(event) => event.stopPropagation()}>
-      <img className='arrows' src={Arrows} alt="arrows" />
-    </Link>
+    <button type="button" className='categories-button' onClick={handleClick}>
+      Open Categories
+    </button>
   );
 }
 
