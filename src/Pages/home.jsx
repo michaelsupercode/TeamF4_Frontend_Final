@@ -35,7 +35,7 @@ const Home = () => {
       <Header />
       <SearchField />
       <div className='Collapsible__trigger'>
-        <ArrowsImg to="/cocktailList/" />
+				<ArrowsImg to="/cocktailList" />
       </div>
       <Footer />
     </div>

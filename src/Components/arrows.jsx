@@ -1,21 +1,14 @@
-import { useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 const ArrowsImg = ({ to }) => {
-  const navigate = useNavigate();
-
-  const handleClick = (event) => {
-    if (!to) {
-      return;
-    }
-
-    event.stopPropagation();
-    navigate(to);
-  };
+  if (!to) {
+    return <span className='categories-button'>Open Categories</span>;
+  }
 
   return (
-    <button type="button" className='categories-button' onClick={handleClick}>
+    <Link to={to} className='categories-button' onClick={(event) => event.stopPropagation()}>
       Open Categories
-    </button>
+    </Link>
   );
 }
 
