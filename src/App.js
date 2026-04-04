@@ -10,12 +10,12 @@ import SingleDrink from './Components/singleDrink';
 import Footer from './Components/footer';
 import SearchField from './Components/searchField';
 
-function App() {
+function App({ openCategories = false }) {
   return (
     <div className="App">
       <Header />
       <SearchField />
-      <Collapsible trigger={<ArrowsImg />}>
+      <Collapsible trigger={<ArrowsImg />} open={openCategories}>
         <div className='category-container'>
           {drinkCategories.map((item) => <SingleDrink
             key = {item.id}

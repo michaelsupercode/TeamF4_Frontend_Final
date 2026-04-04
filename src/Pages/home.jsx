@@ -37,7 +37,7 @@ const Home = () => {
        <div className="App">
       <Header />
       <SearchField />
-      <Collapsible trigger={<ArrowsImg />}>
+      <Collapsible trigger={<ArrowsImg to="/cocktailList/" />}>
         <div className='category-container'>
           {drinkCategories.map((item) => <SingleDrink
             key = {item.id}
