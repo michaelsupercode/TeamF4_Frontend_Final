@@ -1,4 +1,3 @@
-import { useState } from "react";
 import Header from '../Components/header';
 import Collapsible from 'react-collapsible';
 import ArrowsImg from '../Components/arrows';
@@ -11,8 +10,7 @@ import introM from "../video/intro.mp4";
 import ReactPlayer from "react-player";
 
 const Home = () => {
-    const [intro, setIntro] = useState(false);
-  const vodkaApi = drinkCategories.find((item) => item.title === 'Vodka')?.api;
+  const intro = false;
 
     // window.setTimeout(function() {
     //     setIntro(false);
@@ -39,7 +37,7 @@ const Home = () => {
        <div className="App">
       <Header />
       <SearchField />
-      <Collapsible trigger={<ArrowsImg to={vodkaApi ? `/cocktailList/${vodkaApi}` : undefined} />}>
+      <Collapsible trigger={<ArrowsImg />}>
         <div className='category-container'>
           {drinkCategories.map((item) => <SingleDrink
             key = {item.id}

@@ -11,13 +11,11 @@ import Footer from './Components/footer';
 import SearchField from './Components/searchField';
 
 function App() {
-  const vodkaApi = drinkCategories.find((item) => item.title === 'Vodka')?.api;
-
   return (
     <div className="App">
       <Header />
       <SearchField />
-      <Collapsible trigger={<ArrowsImg to={vodkaApi ? `/cocktailList/${vodkaApi}` : undefined} />}>
+      <Collapsible trigger={<ArrowsImg />}>
         <div className='category-container'>
           {drinkCategories.map((item) => <SingleDrink
             key = {item.id}
