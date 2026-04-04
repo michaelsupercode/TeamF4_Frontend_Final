@@ -11,14 +11,24 @@ const SearchField = () => {
   let navigate = useNavigate();
 
 
-  const search = () => {
-    navigate(`/cocktailList/search.php%3Fs=${inputValue}`);
+  const search = (event) => {
+    event.preventDefault();
+
+    const query = inputValue.trim();
+    if (!query) {
+      return;
+    }
+
+    navigate({
+      pathname: '/cocktailList/search.php',
+      search: `?s=${encodeURIComponent(query)}`
+    });
   }
 
   return (
-    <form className="search-field" onSubmit={(e) => e.preventDefault()}>
+    <form className="search-field" onSubmit={search}>
       <input onChange={getValue} type="text" name="text" placeholder="type something" />
-      <input onClick={search} type="button" value="Search" />
+      <input type="submit" value="Search" />
     </form>
   );
 }

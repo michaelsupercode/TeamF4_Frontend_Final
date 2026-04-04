@@ -3,14 +3,12 @@
 import './Styles/css/App.css';
 
 import Header from './Components/header';
-import Collapsible from 'react-collapsible';
-import ArrowsImg from './Components/arrows';
 import drinkCategories from './Data/drinkCategories.json';
 import SingleDrink from './Components/singleDrink';
 import Footer from './Components/footer';
 import SearchField from './Components/searchField';
 
-function App({ openCategories = false }) {
+function App() {
   const categories = (
     <div className='category-container'>
       {drinkCategories.map((item) => <SingleDrink
@@ -27,7 +25,7 @@ function App({ openCategories = false }) {
     <div className="App">
       <Header />
       <SearchField />
-      {openCategories ? categories : <Collapsible trigger={<ArrowsImg />}>{categories}</Collapsible>}
+      {categories}
       <Footer />
     </div>
   );
