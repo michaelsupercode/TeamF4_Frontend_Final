@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { useParams } from 'react-router-dom';
+import { useLocation, useParams } from 'react-router-dom';
 import Header from './header';
 import Collapsible from 'react-collapsible';
 import Footer from './footer';
@@ -12,15 +12,17 @@ const CocktailList = () => {
   const [detail, setDetail] = useState([]);
   const [name, setName] = useState('');
   const [visible, setVisible] = useState(true);
-  let { api } = useParams();
+  const { api = '' } = useParams();
+  const { search } = useLocation();
+  const endpoint = decodeURIComponent(`${api}${search}`);
 
   useEffect(() => {
-    fetch(`https://www.thecocktaildb.com/api/json/v1/1/${api}`)
+    fetch(`https://www.thecocktaildb.com/api/json/v1/1/${endpoint}`)
       .then(response => response.json())
       .then(json => {
         setMix(json.drinks || []);
       });
-  }, [api]);
+  }, [endpoint]);
 
   useEffect(() => {
     fetch(`https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${name}`)
