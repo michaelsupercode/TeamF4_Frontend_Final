@@ -11,21 +11,23 @@ import Footer from './Components/footer';
 import SearchField from './Components/searchField';
 
 function App({ openCategories = false }) {
+  const categories = (
+    <div className='category-container'>
+      {drinkCategories.map((item) => <SingleDrink
+        key = {item.id}
+        title = {item.title}
+        description = {item.description}
+        categoryClass = {item.class}
+        api = {item.api}
+      />)}
+    </div>
+  );
+
   return (
     <div className="App">
       <Header />
       <SearchField />
-      <Collapsible trigger={<ArrowsImg />} open={openCategories}>
-        <div className='category-container'>
-          {drinkCategories.map((item) => <SingleDrink
-            key = {item.id}
-            title = {item.title}
-            description = {item.description}
-            class = {item.class}
-            api = {item.api}
-          />)}
-        </div>
-      </Collapsible>
+      {openCategories ? categories : <Collapsible trigger={<ArrowsImg />}>{categories}</Collapsible>}
       <Footer />
     </div>
   );

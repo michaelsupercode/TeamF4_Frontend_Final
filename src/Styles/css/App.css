@@ -154,6 +154,7 @@ header .title-section p {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    cursor: pointer;
 }
 
 .category h2,
