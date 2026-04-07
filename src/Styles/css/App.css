@@ -279,7 +279,7 @@ header .title-section p {
     text-align: center;
     padding: 0 48px;
     position: fixed;
-    top: 0;
+    top: 4vh;
     visibility: hidden;
     opacity: 0;
     transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
@@ -463,6 +463,7 @@ footer p {
     .cocktail-list-container {
         display: grid;
         grid-template-columns: 1fr 1fr;
+        margin-top: 1vh;
     }
     .big-wrapper {
         position: relative;
