@@ -3,6 +3,7 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+
 }
 
 .landingpage {
@@ -21,6 +22,7 @@ h3 {
 
 li {
     list-style: none;
+    cursor: pointer;
 }
 
 a {
