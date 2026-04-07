@@ -28,11 +28,6 @@ a {
     color: inherit;
 }
 
-img {
-    width: 240px;
-    height: 240px;
-}
-
 body {
     background: #262B46;
     color: #fff;
@@ -336,7 +331,7 @@ header .title-section p {
 .categories-button {
     border: none;
     border-radius: 999px;
-    background: #6FC3DF;
+    /* background: #6FC3DF; */
     color: #1E243D;
     font-family: "Montserrat";
     font-weight: 700;
@@ -345,10 +340,6 @@ header .title-section p {
     text-transform: uppercase;
     padding: 12px 22px;
     cursor: pointer;
-}
-
-.categories-button:hover {
-    background: #5ab5d2;
 }
 
 .categories-button:active {
